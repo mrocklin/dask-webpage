@@ -10,25 +10,25 @@ body {
 /* navbar 
  * ----------------------------------------*/
 
-.site-header {
-  background-color: #EEE8;
+.navbar {
+  background-color: #eaaa6d40;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
-.site-header a {
+.navbar li {
   transition: .3s background-color;
-	  display: block;
-	  color: black;
-	  text-align: center;
-	  padding: 11px 16px;
-	  text-decoration: none;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
 }
-.site-header a:hover {
+.navbar li:hover {
   background-color: #eaaa6d;
   text-decoration: none;
 }
 
-.site-header img {
+.navbar img {
 height: 22px;
 float: right;
 margin-bottom: 0px;
