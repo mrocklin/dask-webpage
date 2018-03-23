@@ -11,21 +11,16 @@ body {
  * ----------------------------------------*/
 
 .navbar {
-  background-color: #eaaa6d40;
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
+  background-color: #000000;
 }
 .navbar li {
   transition: .3s background-color;
-  display: block;
-  color: black;
   text-align: center;
-  padding: 5px 10px 5px 10px;
+  padding: 1px 10px 1px 10px;
   text-decoration: none;
 }
 .navbar li:hover {
-  background-color: #eaaa6d;
-  text-decoration: none;
+  background-color: #c0703d;
 }
 
 .navbar img {
@@ -33,6 +28,11 @@ height: 22px;
 float: right;
 margin-bottom: 0px;
 padding: 0px 24px;
+}
+
+.hero {
+ background-color: #000000e0;
+ text-color: white;
 }
 
 

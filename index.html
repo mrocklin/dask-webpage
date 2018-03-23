@@ -19,7 +19,7 @@
 
     <header>
 
-    <nav class="navbar navbar-expand-lg p py-1">
+    <nav class="navbar navbar-expand-lg text-light navbar-dark">
       <a class="navbar-brand" href="#">
         <img src="http://dask.pydata.org/en/latest/_images/dask_icon.svg">
       </a>
@@ -31,25 +31,30 @@
           <li class="navbar-item"><a class="nav-link" href="#">Link 1</a></li>
           <li class="navbar-item"><a class="nav-link" href="#">Link 2</a></li>
           <li class="navbar-item"><a class="nav-link" href="#">Link 3</a></li>
-		  <li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			  Dropdown link
-			</a>
-			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-			  <a class="dropdown-item" href="#">Sublink 1</a>
-			  <a class="dropdown-item" href="#">Sublink 2</a>
-			  <a class="dropdown-item" href="#">Sublink 3</a>
-			</div>
-		  </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown link
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Sublink 1</a>
+            <a class="dropdown-item" href="#">Sublink 2</a>
+            <a class="dropdown-item" href="#">Sublink 3</a>
+          </div>
+          </li>
         </ul>
       </div>
     </nav>
 
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-centerg-light" style="background-color: #eaaa6da0;">
-      <div class="col-md-5 p-lg-5 mx-auto my-5">
-        <h1 class="display-4 font-weight-normal">Dask: Parallel Python</h1>
-		  <p class="lead font-weight-normal">Scaling the Python ecosystem with friendly interfaces and intelligent algorithms</p>
-        <a class="btn btn-outline-secondary" href="#">Coming soon</a>
+    <div class="hero position-relative overflow-hidden p-3 text-center text-light">
+      <div class="col-md-5 p-lg-1 mx-auto my-5">
+        <img src="http://dask.pydata.org/en/latest/_images/dask_horizontal_white.svg">
+		  <p class="lead font-weight-normal">
+        Dask natively scales Python
+      </p>
+		  <p class="lead ">
+        Dask enables advanced parallelism well beyond traditional Map-Reduce and Map-Groupby-Aggregation Systems
+      </p>
+        <a class="btn btn-outline-warning" href="https://dask.pydata.org/en/latest">Learn More</a>
       </div>
       <div class="product-device box-shadow d-none d-md-block"></div>
       <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
@@ -62,27 +67,33 @@
       ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
 
-      <div class="container marketing">
+      <div class="container marketing p-md-5">
 
         <!-- Three columns of text below the carousel -->
         <div class="row">
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <img src="http://dask.pydata.org/en/latest/_images/dask-array-black-text.svg" height="200">
             <h2>Numpy</h2>
-            <p>Dask scales multi-dimensional Numpy arrays enabling applications in earth science, advanced imaging, and machine learning algorithms</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <p>Dask arrays scale Numpy, enabling multi-dimensional data analysis in earth science, advanced imaging, and machine learning algorithms</p>
+            <p>
+              <a class="btn btn-outline-secondary" href="https://dask.pydata.org/en/latest/array.html" role="button">Learn More &raquo;</a>
+              <a class="btn btn-outline-secondary" href="https://mybinder.org/v2/gh/dask/dask-examples/master?filepath=array.ipynb" role="button">Try Now &raquo;</a>
+            </p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <img src="http://dask.pydata.org/en/latest/_images/dask-dataframe.svg" height="200">
             <h2>Pandas</h2>
-            <p>Dask scales Pandas dataframes enabling applications in time series, business intelligence, and general data munging on big data.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <p>Dask dataframes scale Pandas, enabling applications in time series, business intelligence, and general data munging on big data.</p>
+            <p>
+              <a class="btn btn-outline-secondary" href="https://dask.pydata.org/en/latest/dataframe.html" role="button">Learn More &raquo;</a>
+              <a class="btn btn-outline-secondary" href="https://mybinder.org/v2/gh/dask/dask-examples/master?filepath=dataframe.ipynb" role="button">Try Now &raquo;</a>
+            </p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Machine Learning</h2>
-            <p>Dask scales machine learning libraries like Scikit-Learn and interoperates with peer libraries like XGBoost to enable scalable training and prediction on large models or large datasets</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Rosenbrock_function.svg/300px-Rosenbrock_function.svg.png" height="200">
+            <h2>Scikit-Learn</h2>
+            <p>Dask-ML scales machine learning libraries like Scikit-Learn and XGBoost to enable scalable training and prediction on large models and large datasets</p>
+            <p><a class="btn btn-outline-secondary" href="https://dask-ml.readthedocs.org/en/latest/" role="button">Learn More &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
 
@@ -94,8 +105,8 @@
         <div class="row featurette">
           <div class="col-md-7">
             <h2 class="featurette-heading">Familiar for Python users <span class="text-muted"> and easy to get started</span></h2>
-            <p class="lead">Dask uses existing Python APIs and data structures to make it easy to switch between Numpy, Pandas, Scikit-learn and their Dask equivalents.  You don't have to rewrite your code or retrain to scale up.</>
-            <p>Dask respects and engages ecosystem and community standards</p>
+            <p class="lead">Dask uses existing Python APIs and data structures to make it easy to switch between Numpy, Pandas, Scikit-learn to their Dask-powered equivalents. </>
+            <p class="lead"> You don't have to rewrite your code or retrain to scale up</p>
           </div>
           <div class="col-md-5">
             <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x400/auto" alt="Generic placeholder image">
@@ -106,10 +117,10 @@
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Scales up to clusters <span class="text-muted"> or just use it on your laptop</span></h2>
+            <h2 class="featurette-heading">Scale up to clusters <span class="text-muted"> or just use it on your laptop</span></h2>
             <p class="lead">Dask scales to thousand-node clusters and its algorithms have been tested on some of the largest supercomputers in the world.  </p>
 
-            <p class="lead">You don't need a cluster though.  Many people use Dask to scale data on their laptop, using multiple cores for computation and their disk for excess storage.</p>
+            <p class="lead">But you don't need a massive cluster to get started.  Many people use Dask to scale computations on their laptop, using multiple cores for computation and their disk for excess storage.</p>
           </div>
           <div class="col-md-5 order-md-1">
             <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x400/auto" alt="Generic placeholder image">
@@ -121,7 +132,8 @@
         <div class="row featurette">
           <div class="col-md-7">
             <h2 class="featurette-heading">Flexible and Extensible <span class="text-muted"> letting you parallelize your internal systems</span></h2>
-            <p class="lead">Dask exposes lower-level APIs letting you build custom systems for custom needs.  This helps open source community leaders parallelize their own packages and helps businesses parallelize tricky business logic</p>
+            <p class="lead">Not all computations fit into a big dataframe</p>
+            <p class="lead">Dask exposes lower-level APIs letting you build custom systems for custom applications.  This helps open source community leaders parallelize their own packages and helps business leaders scale custom business logic</p>
           </div>
           <div class="col-md-5">
             <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x400/auto" alt="Generic placeholder image">
