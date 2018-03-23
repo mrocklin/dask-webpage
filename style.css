@@ -23,16 +23,9 @@ body {
   background-color: #c0703d;
 }
 
-.navbar img {
-height: 22px;
-float: right;
-margin-bottom: 0px;
-padding: 0px 24px;
-}
-
 .hero {
- background-color: #000000e0;
- text-color: white;
+  background-color: #000000e0;
+  text-color: white;
 }
 
 
