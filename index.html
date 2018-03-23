@@ -11,9 +11,12 @@
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css">
 
     <!-- Custom styles for this template -->
     <link href="style.css" rel="stylesheet">
+
+
   </head>
   <body>
 
@@ -46,8 +49,8 @@
         Dask natively scales Python
       </p>
 		  <p class="lead ">
-        Dask enables advanced parallelism for the Python analytics ecosystem,
-        allowing it to scale natively without sacrificing performance or intuition.
+        Dask provides advanced parallelism for analytics,
+        enabling performance at scale for the tools you love
       </p>
         <a class="btn btn-outline-warning" href="https://dask.pydata.org/en/latest">Learn More</a>
       </div>
@@ -106,26 +109,43 @@
             <p class="lead">Dask uses existing Python APIs and data structures to make it easy to switch between Numpy, Pandas, Scikit-learn to their Dask-powered equivalents. </>
             <p class="lead"> You don't have to rewrite your code or retrain to scale up</p>
           </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x400/auto" alt="Generic placeholder image">
+
+          <div class="col-md-5 code-block">
+            <pre><code class="language-python"># Dataframes implement the Pandas API
+import dask.dataframe as dd
+df = dd.read_csv('s3://.../2018-*-*.csv')
+df.groupby(df.account_id).balance.sum()</code></pre>
+
+            <pre><code class="language-python"># Arrays implement the Numpy API
+import dask.array as da
+x = da.random.random(size=(10000, 10000),
+                     chunks=(1000, 1000))
+x + x.T - x.mean(axis=0)</code></pre>
+
+            <pre><code class="language-python"># ML implements the Scikit-Learn API
+from dask_ml.linear_model \
+  import LogisticRegression
+lr = LogisticRegression()
+lr.fit(train, test)</code></pre>
           </div>
         </div>
 
-        <hr class="featurette-divider">
+        <hr class="featurette-divider"></hr>
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
             <h2 class="featurette-heading">Scale up to clusters <span class="text-muted"> or just use it on your laptop</span></h2>
-            <p class="lead">Dask scales to thousand-node clusters and its algorithms have been tested on some of the largest supercomputers in the world.  </p>
+            <p class="lead">Dask's schedulers scale to thousand-node clusters and its algorithms have been tested on some of the largest supercomputers in the world.</p>
 
-            <p class="lead">But you don't need a massive cluster to get started.  Many people use Dask to scale computations on their laptop, using multiple cores for computation and their disk for excess storage.</p>
+            <p class="lead">But you don't need a massive cluster to get started.  Dask ships with schedulers designed for use on personal machines.  Many people use Dask today to scale computations on their laptop, using multiple cores for computation and their disk for excess storage.</p>
           </div>
-          <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x400/auto" alt="Generic placeholder image">
+          <div class="col-md-5 order-md-1" style="padding-top: 4rem;">
+            <img src="https://github.com/dask/dask-org/raw/master/images/grid_search_schedule.gif"
+                 width="100%">
           </div>
         </div>
 
-        <hr class="featurette-divider">
+        <hr class="featurette-divider"></hr>
 
         <div class="row featurette">
           <div class="col-md-7">
@@ -133,12 +153,14 @@
             <p class="lead">Not all computations fit into a big dataframe</p>
             <p class="lead">Dask exposes lower-level APIs letting you build custom systems for custom applications.  This helps open source community leaders parallelize their own packages and helps business leaders scale custom business logic</p>
           </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x400/auto" alt="Generic placeholder image">
+
+          <div class="col-md-5 p-lg-1 mx-auto my-5">
+            <img src="https://github.com/dask/dask-org/raw/master/images/credit-model.svg.png"
+                 width="100%">
           </div>
         </div>
 
-        <hr class="featurette-divider">
+        <hr class="featurette-divider"></hr>
 
         <!-- /END THE FEATURETTES -->
 
@@ -157,5 +179,10 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
       <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-python.min.js"></script>
+
+
   </body>
 </html>
